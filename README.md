@@ -34,6 +34,8 @@ db/
 lib/
   student_scraper.rb
 public/
+  images/
+  css/
 spec/
   controllers/
     students_controller.rb
@@ -139,7 +141,7 @@ With the frontend, same rules apply, just grab the HTML from the current site an
 You can put the javascript and CSS and images from the live site in public and those will be served as the root of your site. For example:
 
 ```
-public/stylesheets/style.css
+public/css/style.css
 public/javascripts/site.js
 public/images/student-profile-pic.jpg
 ```
@@ -165,7 +167,7 @@ See if you can write specs for the form. Within the `students_controller_spec.rb
 ```ruby
 context 'POST /students' do
   it 'accepts the form data and creates a student with those attributes' do
-    # The `post` Rack::Test method takes a second argument of a POST data hash.    
+    # The `post` Rack::Test method takes a second argument of a POST data hash.
     post '/students', {:name => "Avi Flombaum"}
     expect(Student.find_by(:name => "Avi Flombaum")).to be_a(Student)
   end

@@ -5,7 +5,7 @@ if ActiveRecord::Migrator.needs_migration?
 end
 
 use Rack::MethodOverride
-use Rack::Static, :root => 'public', :urls => ['/']
+use Rack::Static, :root => 'public', :urls => ['/images', '/css']
 
 
 use StudentsController
