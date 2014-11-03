@@ -13,20 +13,11 @@ describe StudentsController do
 
     # BONUS - Use factory_girl https://github.com/thoughtbot/factory_girl
 
-    # For all the tests of the student index, we need the following:
-    # 1. To stub out that the Student::all to return our test object student.
-    #    This means that our controller tests for the index will not actually
-    #    call the ::all method on Student, but rather, stub it out, or fake it.
-    #    It's nice if you can isolate your controller tests from the database.
-    #    However, feel free to never use something like should_receive and 
-    #    just use as many real objects as you want.
-
-    # 2. It creates a mock web request to the route '/' so that our tests
+    # This creates a mock web request to the route '/' so that our tests
     #    can check the response to that request through the Rack::Test provided
     #    method 'last_response', which will always mean the last response
     #    our test suite triggered.
     before do
-      Student.should_receive(:all).and_return([student])
       get '/'
     end
 
