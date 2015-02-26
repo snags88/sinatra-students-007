@@ -10,7 +10,7 @@ ENV['SINATRA_ENV'] ||= "development"
 # 3. To load all the files of our application, models, concerns, controllers
 
 # Load Bundler
-require 'bundler/setup'  
+require 'bundler/setup'
 Bundler.require(:default, ENV['SINATRA_ENV'])
 
 # A little about ENV['SINATRA_ENV']
