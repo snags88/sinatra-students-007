@@ -66,7 +66,7 @@ class StudentScraper
     students_array.collect do |student|
       student_page = Nokogiri::HTML(open(student_page_url(student)))
       name = student_page.css('h4.ib_main_header').text
-      
+
       # This is using the find_or_create method defined by Sequel
       # http://sequel.rubyforge.org/rdoc/classes/Sequel/Model/ClassMethods.html#method-i-find_or_create
       student = Student.find_or_create_by(:name => name)
@@ -84,7 +84,7 @@ class StudentScraper
       student.work = value_missing
       student.work_title = parse_work_title(student_page)
       student.education = parse_education(student_page)
-      
+
       puts "Saving student ##{student.id} (#{student.name})..." if student.save
       student
    end

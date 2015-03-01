@@ -17,6 +17,6 @@ task :scrape_students do
   require './lib/student_scraper'
 
   # Let's instantiate and call. Make sure to read through the StudentScraper class.
-  scraper = StudentScraper.new('http://students.flatironschool.com')
+  scraper = StudentScraper.new('http://ruby007.students.flatironschool.com')
   scraper.call
 end
