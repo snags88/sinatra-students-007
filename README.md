@@ -1,7 +1,7 @@
 ---
-  tags: student-project, sinatra, activerecord, rspec
-  language: ruby
-  resources: 3
+tags: student-project, sinatra, activerecord, rspec
+language: ruby
+resources: 3
 ---
 
 # Sinatra Students
@@ -54,7 +54,7 @@ It's important that before you start the project, each of you read the codebase 
 
 ## Bundle
 
-Make sure to run `bundle install ` before doing anything.
+Make sure to run `bundle install` before doing anything.
 
 ## Running the Test Suite
 
@@ -67,7 +67,7 @@ Additionally, you should notice that a coverage report is generated via SimpleCo
 
 ### Autotest via Guard
 
-The application is setup to use `guard` to auto-run the test suite on most file saves. Start guard with:
+The application is set up to use `guard` to auto-run the test suite on most file saves. Start guard with:
 
 ```bash
 guard
@@ -95,12 +95,12 @@ Try running the scrape immediately (assuming you first followed the instructions
 
 You will need to add migrations to create the columns/attributes needed for the scrape class to correctly populate a student's data.
 
-So for instance, the first error you'll see if you run the strape before migrating:
+So for instance, the first error you'll see if you run the scrape before migrating:
 
 ```bash
 rake scrape_students
 rake aborted!
-undefined method `profile_image=' for #<Student @values={:id=>1, :name=>"Alex Chiu"}>
+undefined method profile_image= #<Student @values={:id=>1, :name=> Ian Miller }>
 ```
 
 While you could solve this with `attr_accessor :profile_image`, that will not persist the data to your database. Instead, add a new migration to the `db/migrate` folder, maybe named `02_add_profile_image_to_students.rb`. That file should contain the appropriate migration.
