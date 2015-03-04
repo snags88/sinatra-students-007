@@ -1,7 +1,7 @@
 # A Gemfile
 source 'https://rubygems.org'
 
-gem 'sinatra'
+gem 'sinatra', :require => 'sinatra/base'
 gem 'shotgun'
 gem 'tux'
 gem 'activerecord', :require => 'active_record'
@@ -21,4 +21,6 @@ gem 'capybara'
 gem 'terminal-notifier-guard'
 gem 'database_cleaner', git: 'https://github.com/bmabey/database_cleaner.git'
 gem 'rack-test'
+
+gem 'sinatra-flash', :require => 'sinatra/flash'
 

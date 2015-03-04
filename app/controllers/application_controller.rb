@@ -10,7 +10,8 @@ class ApplicationController < Sinatra::Base
   # the controller subfolder and the view when rendering erb.
   # See the example in students_controller.rb, get '/'.
   set :views, Proc.new { File.join(root, "../views") }
-  
+  enable :sessions
+  register Sinatra::Flash
   register Sinatra::ActiveRecordExtension
   set :session_secret, "my_application_secret"
 end
