@@ -1,0 +1,67 @@
+<form class="form-horizontal" action="/students/<%= @student.slug %>" method="POST">
+  <input type="hidden" name="_method" value="PATCH">
+  <fieldset>
+    <legend>Edit Student</legend>
+
+    <div class="form-group">
+          <label for="inputName" class="col-md-2 control-label">Name</label>
+          <div class="col-md-10">
+            <input type="text" class="form-control" id="inputName" placeholder="Name" name="attributes[name]" value="<%= @student.name %>">
+          </div>
+    </div>
+    <div class="form-group">
+      <label for="inputTwitter" class="col-md-2 control-label">Twitter Link</label>
+      <div class="col-md-10">
+        <input type="text" class="form-control" id="inputTwitter" placeholder="Twitter URL" name="attributes[twitter]" value="<%= @student.twitter %>">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputLinkedIn" class="col-md-2 control-label">LinkedIn Link</label>
+      <div class="col-md-10">
+        <input type="text" class="form-control" id="inputLinkedIn" placeholder="LinkedIn URL" name="attributes[linkedin]" value="<%= @student.linkedin %>">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputGithub" class="col-md-2 control-label">GitHub Link</label>
+      <div class="col-md-10">
+        <input type="text" class="form-control" id="inputGithub" placeholder="GitHub URL" name="attributes[github]" value="<%= @student.github %>">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputQuote" class="col-md-2 control-label">Quote</label>
+      <div class="col-md-10">
+        <input type="text" class="form-control" id="inputQuote" placeholder="Favorite Quote" name="attributes[quote]" value='<%=@student.escape_quotes%>'>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputBio" class="col-md-2 control-label">Short Bio</label>
+      <div class="col-md-10">
+        <input type="text" class="form-control" id="inputBio" placeholder="Short Bio" name="attributes[bio]" value="<%= @student.bio %>">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputWork" class="col-md-2 control-label">Work</label>
+      <div class="col-md-10">
+        <input type="text" class="form-control" id="inputWork" placeholder="Last Workplace" name="attributes[work]" value="<%= @student.work %>">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputWorkTitle" class="col-md-2 control-label">Work Title</label>
+      <div class="col-md-10">
+        <input type="text" class="form-control" id="inputWorkTitle" placeholder="Last Work Title" name="attributes[work_title]" value="<%= @student.work_title %>">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputEducation" class="col-md-2 control-label">Education</label>
+      <div class="col-md-10">
+        <input type="text" class="form-control" id="inputEducation" placeholder="Edcuation Info" name="attributes[education]" value="<%= @student.education %>">
+      </div>
+    </div>
+    <div class="form-group">
+      <span class="col-md-offset-2 col-md-10">
+        <a href="/students/<%= @student.slug %>" class="btn btn-warning">Cancel</a>
+        <input type="submit" class="btn btn-success" value="Save">
+      </span>
+    </div>
+  </fieldset>
+</form>

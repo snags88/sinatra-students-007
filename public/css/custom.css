@@ -1,0 +1,155 @@
+img.profile-img {
+  width: 100%;
+  height: 298px;
+}
+
+img.show-profile-img {
+  width: 100%;
+  height: auto;
+}
+
+.show-student-img {
+  height: 298px;
+  overflow: hidden;
+}
+
+.index-row {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.each-student-box {
+  border: 0.5px solid;
+  border-color: #9f9f9f;
+  width: 300px;
+  height: 100%;
+}
+
+.new-student {
+  height: 300px;
+  font-size: 60px;
+}
+
+.center-xy {
+  position: relative;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto 0;
+  left: 50%;
+}
+
+body {
+  padding: 70px 0;
+}
+
+a .glyphicon,
+a .glyphicon :link,
+a .glyphicon :visited,
+a.icon-link,
+a.icon-link :link,
+a.icon-link :visited {
+  color: #777;
+  text-decoration: none;
+}
+
+a .glyphicon :hover,
+a.icon-link :hover {
+  color: #555;
+  text-decoration: none;
+}
+
+.student-border {
+  border-top: 0.5px solid #9f9f9f;
+}
+
+.show-container {
+  height: 300px;
+  border: 0.25px dotted #bfbfbf;
+}
+
+.show-box {
+  position: absolute;
+  margin: auto 0;
+}
+
+i.icon {
+  font-size: 30px;
+}
+
+.cover,
+.content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #FCFCFC
+}
+
+.cover {
+  z-index: -1;
+}
+
+div.content {
+  visibility: hidden;
+  opacity:0;
+  top: -298px;
+}
+
+.show-container:hover > div.content {
+  visibility:visible;
+  opacity:1;
+  transition-duration: 1s;
+}
+
+
+
+/*****************************/
+
+@font-face {
+  font-family: 'fontello';
+  src: url('../fonts/fontello.eot?15781700');
+  src: url('../fonts/fontello.eot?15781700#iefix') format('embedded-opentype'),
+       url('../fonts/fontello.woff?15781700') format('woff'),
+       url('../fonts/fontello.ttf?15781700') format('truetype'),
+       url('../fonts/fontello.svg?15781700#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-twitter:before { content: '\e800'; } /* '' */
+.icon-github-circled:before { content: '\e801'; } /* '' */
+.icon-linkedin:before { content: '\e802'; } /* '' */
+.icon-quote:before { content: '\e803'; } /* '' */
+.icon-doc-text:before { content: '\e804'; } /* '' */
+.icon-briefcase:before { content: '\e805'; } /* '' */
+.icon-book-open:before { content: '\e806'; } /* '' */
