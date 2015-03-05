@@ -13,6 +13,7 @@ gem 'shotgun'
 gem 'thin'
 gem 'json'
 gem 'simplecov'
+gem 'rack'
 
 group :development, :test do
   gem 'sqlite3'
