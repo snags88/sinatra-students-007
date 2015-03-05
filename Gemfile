@@ -14,11 +14,11 @@ gem 'thin'
 gem 'json'
 gem 'simplecov'
 gem 'rack'
+gem 'pry'
 
 group :development, :test do
   gem 'sqlite3'
   gem 'tux'
-  gem 'pry'
   gem 'guard-rspec'
   gem 'rspec'
   gem 'capybara'
