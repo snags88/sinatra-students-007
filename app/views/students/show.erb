@@ -17,7 +17,9 @@
       </div>
       <div class="content">
         <div class="text-center center-xy">
-          <%= @student.twitter %>
+          <a href="<%= @student.twitter %>" target="_">
+            <%= @student.twitter %>
+          </a>
         </div>
       </div>
   </div>
@@ -29,7 +31,9 @@
       </div>
       <div class="content">
         <div class="text-center center-xy">
-          <%= @student.github %>
+          <a href="<%= @student.github %>" target="_">
+            <%= @student.github %>
+          </a>
         </div>
       </div>
   </div>
@@ -41,7 +45,9 @@
       </div>
       <div class="content">
         <div class="text-center center-xy">
-          <%= @student.linkedin %>
+          <a href="<%= @student.linkedin %>" target="_">
+            <%= @student.linkedin %>
+          </a>
         </div>
       </div>
   </div>
@@ -64,7 +70,7 @@
       <div class="cover">
         <div id="image" class="text-center center-xy">
           <div class="show-student-img">
-            <img class="show-profile-img center-block center-xy" src="<%= @student.profile_img_link %>" alt="">
+            <img class="show-profile-img center-xy" src="<%= @student.profile_img_link %>" alt="">
           </div>
         </div>
       </div>
@@ -123,12 +129,12 @@
         </div>
       </div>
       <div class="content">
-        <a href="/students/<%= @student.slug %>/edit">
-          <div class="text-center center-xy">
-            Edit Info
-          </div>
-        </a>
-      </div>
+        <div class="text-center center-xy">
+          <a href="/students/<%= @student.slug %>/edit">
+              Edit Info
+          </a>
+        </div>
+    </div>
   </div>
 </div>
 
@@ -140,11 +146,11 @@
         </div>
       </div>
       <div class="content">
-        <a href="/students">
-          <div class="text-center center-xy">
+        <div class="text-center center-xy">
+          <a href="/students">
             Home
-          </div>
-        </a>
+          </a>
+        </div>
       </div>
   </div>
 </div>
