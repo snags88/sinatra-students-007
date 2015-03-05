@@ -158,6 +158,7 @@ DEPENDENCIES
   nokogiri
   pg
   pry
+  rack
   rack-test
   rake
   require_all
